@@ -12,6 +12,15 @@
   </p>
 </div>
 
+<h2 align="center">🌐 Live Demo</h2>
+
+<p align="center">
+  🚀 <strong>SkillBridge is live!</strong><br>
+  <a href="https://skillbridge-h0q6.onrender.com">
+    <strong>Visit SkillBridge →</strong>
+  </a>
+</p>
+
 <p align="center">
   <a href="#overview">Overview</a> ·
   <a href="#features">Features</a> ·
