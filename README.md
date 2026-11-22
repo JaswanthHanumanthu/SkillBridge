@@ -12,32 +12,41 @@
   </p>
 </div>
 
-<!-- LIVE DEMO SECTION -->
+<!-- ━━━━━━━━━━━━━━━━ LIVE PLATFORM ━━━━━━━━━━━━━━━━ -->
+
 <div align="center">
 
-<h2>🚀 SkillBridge — Live Platform</h2>
+<h2>✦ EXPERIENCE SKILLBRIDGE</h2>
 
 <p>
-  <strong>Discover opportunities. Build skills. Shape your career.</strong>
+  <strong>Discover opportunities. Match your skills. Unlock your future.</strong>
+</p>
+
+<p>
+  A smarter platform connecting students with internships, jobs,<br>
+  hackathons and career-building opportunities.
 </p>
 
 <br>
 
 <a href="https://skillbridge-h0q6.onrender.com">
-  <img src="https://img.shields.io/badge/🌐_EXPLORE_SKILLBRIDGE-LIVE_DEMO-6366F1?style=for-the-badge&labelColor=111827" alt="Explore SkillBridge Live Demo"/>
+  <img src="https://img.shields.io/badge/OPEN_LIVE_PLATFORM-6366F1?style=for-the-badge&logo=rocket&logoColor=white" alt="Open SkillBridge"/>
 </a>
 
 <br><br>
 
-<img src="https://img.shields.io/badge/Status-Live-22C55E?style=flat-square"/>
-<img src="https://img.shields.io/badge/Deployment-Render-7C3AED?style=flat-square"/>
-<img src="https://img.shields.io/badge/Platform-Full--Stack-0EA5E9?style=flat-square"/>
+<img src="https://img.shields.io/badge/●%20LIVE-22C55E?style=flat-square"/>
+<img src="https://img.shields.io/badge/API-FastAPI-0EA5E9?style=flat-square&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/DATABASE-PostgreSQL-6366F1?style=flat-square&logo=postgresql&logoColor=white"/>
+<img src="https://img.shields.io/badge/HOSTED_ON-Render-8B5CF6?style=flat-square&logo=render&logoColor=white"/>
 
-<p>
-  <sub>Hosted on Render · FastAPI · PostgreSQL</sub>
-</p>
+<br>
+
+<sub>Built to bridge the gap between skills and opportunities.</sub>
 
 </div>
+
+<hr>
 
 <p align="center">
   <a href="#overview">Overview</a> ·
