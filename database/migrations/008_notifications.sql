@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS notifications (
 
 CREATE INDEX IF NOT EXISTS idx_notifications_recipient_created
     ON notifications (recipient_user_id, created_at DESC, id DESC);
+-- Composite key supports recipient-scoped unread queries without a partial-index predicate.
 CREATE INDEX IF NOT EXISTS idx_notifications_unread
-    ON notifications (recipient_user_id, created_at DESC, id DESC)
-    WHERE is_read=FALSE;
+    ON notifications (recipient_user_id, is_read, created_at DESC, id DESC);
 
 COMMIT;

@@ -229,4 +229,6 @@ CREATE INDEX idx_applications_job ON applications(job_id);
 CREATE INDEX idx_applications_status_applied ON applications(current_status, applied_at DESC);
 CREATE INDEX idx_app_history_app ON application_status_history(application_id);
 CREATE INDEX idx_notifications_recipient_created ON notifications(recipient_user_id, created_at DESC, id DESC);
-CREATE INDEX idx_notifications_unread ON notifications(recipient_user_id, created_at DESC, id DESC) WHERE is_read=FALSE;
+-- Index recipient and read state together for unread-notification lookups.
+CREATE INDEX idx_notifications_unread
+    ON notifications (recipient_user_id, is_read, created_at DESC, id DESC);
