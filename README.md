@@ -12,14 +12,32 @@
   </p>
 </div>
 
-<h2 align="center">🌐 Live Demo</h2>
+<!-- LIVE DEMO SECTION -->
+<div align="center">
 
-<p align="center">
-  🚀 <strong>SkillBridge is live!</strong><br>
-  <a href="https://skillbridge-h0q6.onrender.com">
-    <strong>Visit SkillBridge →</strong>
-  </a>
+<h2>🚀 SkillBridge — Live Platform</h2>
+
+<p>
+  <strong>Discover opportunities. Build skills. Shape your career.</strong>
 </p>
+
+<br>
+
+<a href="https://skillbridge-h0q6.onrender.com">
+  <img src="https://img.shields.io/badge/🌐_EXPLORE_SKILLBRIDGE-LIVE_DEMO-6366F1?style=for-the-badge&labelColor=111827" alt="Explore SkillBridge Live Demo"/>
+</a>
+
+<br><br>
+
+<img src="https://img.shields.io/badge/Status-Live-22C55E?style=flat-square"/>
+<img src="https://img.shields.io/badge/Deployment-Render-7C3AED?style=flat-square"/>
+<img src="https://img.shields.io/badge/Platform-Full--Stack-0EA5E9?style=flat-square"/>
+
+<p>
+  <sub>Hosted on Render · FastAPI · PostgreSQL</sub>
+</p>
+
+</div>
 
 <p align="center">
   <a href="#overview">Overview</a> ·
