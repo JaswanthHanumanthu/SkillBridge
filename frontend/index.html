@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f7f4" />
+  <title>SkillBridge — Your skills. Your opportunities. Your next step.</title>
+  <meta name="description" content="Discover career opportunities matched to your skills, build your profile, and move forward with SkillBridge." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Project Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       1. LANDING & HOME SCREEN (3 Clear Role Entry Points)
+       ======================================================================== -->
+  <div id="landing-screen" class="landing-screen">
+    <nav class="landing-nav">
+      <a class="brand" href="#home" aria-label="SkillBridge home">
+        <span class="brand-mark"><i data-lucide="layers"></i></span>
+        <span>SkillBridge<small>CAREER OPPORTUNITIES, CONNECTED</small></span>
+      </a>
+      <div class="landing-nav-actions">
+        <button id="hero-quick-login-btn" class="btn btn-outline">
+          <i data-lucide="log-in"></i> Sign In
+        </button>
+      </div>
+    </nav>
+
+    <main class="landing-main" id="home">
+      <section class="landing-hero" aria-labelledby="landing-title">
+        <div class="landing-branding">
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> A clearer path from skills to work</span>
+            <h1 id="landing-title">Make your skills <em>move you forward.</em></h1>
+            <p>Find opportunities that fit what you know, see where to grow, and keep your next career move in view.</p>
+            <ul class="landing-benefits" aria-label="SkillBridge benefits">
+              <li><i data-lucide="scan-search"></i><span>Discover relevant opportunities</span></li>
+              <li><i data-lucide="chart-no-axes-column-increasing"></i><span>Understand your skill gaps</span></li>
+              <li><i data-lucide="clipboard-check"></i><span>Track your applications</span></li>
+            </ul>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="pathway-heading"><span>THE SKILLBRIDGE PATHWAY</span><span>01 — 04</span></div>
+            <div class="pathway-track">
+              <section class="pathway-stage pathway-skills">
+                <span class="pathway-index">01</span><i data-lucide="user-round"></i>
+                <b>Your skills</b><small>Python · SQL · Design</small>
+              </section>
+              <span class="pathway-link" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+              <section class="pathway-stage pathway-match">
+                <span class="pathway-index">02</span><i data-lucide="scan-search"></i>
+                <b>Better matches</b><small>Relevant to you</small>
+              </section>
+              <span class="pathway-link" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+              <section class="pathway-stage pathway-opportunity">
+                <span class="pathway-index">03</span><i data-lucide="briefcase-business"></i>
+                <b>New opportunity</b><small>Ready when you are</small>
+              </section>
+              <span class="pathway-link" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+              <section class="pathway-stage pathway-growth">
+                <span class="pathway-index">04</span><i data-lucide="move-up-right"></i>
+                <b>Career growth</b><small>Progress with purpose</small>
+              </section>
+            </div>
+            <div class="pathway-outcome"><span class="outcome-rule"></span><i data-lucide="move-up-right"></i><span><b>A more intentional next step</b><small>One considered move at a time</small></span></div>
+          </div>
+          <p class="landing-footnote"><i data-lucide="circle-check"></i> Skills-first discovery · Transparent matching · Human-led hiring</p>
+        </div>
+
+        <aside id="landing-auth-panel" class="landing-auth-panel" aria-labelledby="landing-auth-title">
+          <div class="auth-panel-heading">
+            <span class="auth-kicker">WELCOME TO SKILLBRIDGE</span>
+            <h2 id="landing-auth-title">Sign in to continue</h2>
+            <p>Choose your workspace, then enter your account details.</p>
+          </div>
+
+          <div class="landing-role-group" role="group" aria-label="Choose your SkillBridge role">
+            <button type="button" class="landing-role-choice is-selected" data-landing-role="user" aria-pressed="true">
+              <i data-lucide="graduation-cap"></i><span>Candidate</span>
+            </button>
+            <button type="button" class="landing-role-choice" data-landing-role="recruiter" aria-pressed="false">
+              <i data-lucide="briefcase-business"></i><span>Recruiter</span>
+            </button>
+            <button type="button" class="landing-role-choice" data-landing-role="developer" aria-pressed="false">
+              <i data-lucide="shield-check"></i><span>Platform Admin</span>
+            </button>
+          </div>
+          <p id="landing-role-description" class="landing-role-description" aria-live="polite">Discover opportunities, track your progress, and develop your skills.</p>
+
+          <form id="landing-login-form" class="landing-login-form">
+            <input type="hidden" name="expected_role" id="landing-expected-role" value="user">
+            <div class="form-field">
+              <label for="landing-username">Username</label>
+              <input id="landing-username" class="form-input" name="username" autocomplete="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-field">
+              <label for="landing-password">Password</label>
+              <div class="password-field"><input id="landing-password" class="form-input" type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required><button class="password-toggle" type="button" data-landing-password-toggle aria-label="Show password" aria-pressed="false"><i data-lucide="eye"></i></button></div>
+            </div>
+            <p id="landing-login-error" class="form-error" role="alert" aria-live="polite"></p>
+            <button id="landing-login-submit" type="submit" class="btn btn-primary landing-login-submit"><span>Sign in</span><i data-lucide="arrow-right"></i></button>
+          </form>
+
+          <div class="landing-auth-footer">
+            <p id="landing-create-account-prompt">New to SkillBridge? <button type="button" id="landing-create-account">Create an account</button></p>
+            <p id="landing-admin-note" class="hidden"><i data-lucide="lock-keyhole"></i> Administrator accounts are provisioned by the platform.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="landing-proof" aria-label="SkillBridge principles">
+        <span><i data-lucide="network"></i> A unified opportunity platform</span>
+        <span><i data-lucide="list-checks"></i> Clear, explainable skill matching</span>
+        <span><i data-lucide="shield-check"></i> Workspaces built for your role</span>
+      </section>
+    </main>
+  </div>
+
+  <!-- ========================================================================
+       2. AUTHENTICATED APP SHELL (Sidebar, Topbar & Viewport)
+       ======================================================================== -->
+  <div id="app-shell" class="app-shell hidden">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="#home" aria-label="SkillBridge home">
+          <span class="brand-mark"><i data-lucide="layers"></i></span>
+          <span>SkillBridge<small>CAREER OPPORTUNITIES</small></span>
+        </a>
+        <button class="icon-btn sidebar-close" id="sidebar-close" aria-label="Close menu">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="workspace-label" id="workspace-label">WORKSPACE</div>
+      <nav class="sidebar-nav" id="sidebar-nav"></nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-role-badge">
+          <span class="avatar" id="sidebar-avatar">AK</span>
+          <div>
+            <b id="sidebar-user-name">Asha Kumar</b>
+            <small id="sidebar-user-role">Candidate</small>
+          </div>
+        </div>
+        <button class="nav-link" id="logout-btn" style="color:#f28b82;">
+          <i data-lucide="log-out"></i>
+          <span>Log out</span>
+        </button>
+        <div class="sidebar-version">
+          <span>YOUR CAREER WORKSPACE</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="main-area">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" style="display:none;" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="top-search">
+          <i data-lucide="search"></i>
+          <input id="global-search" type="search" placeholder="Search opportunities, skills, companies..." />
+          <kbd style="font-size:9px;background:#fff;border:1px solid #e1e7f0;border-radius:4px;padding:2px 5px;color:#8f9cb0;">Enter</kbd>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="notification-center" id="notification-center">
+            <button class="icon-btn notification-bell" id="notification-bell" type="button" aria-label="Notifications" aria-expanded="false" aria-controls="notification-popover">
+              <i data-lucide="bell"></i>
+              <span class="notification-badge hidden" id="notification-badge" aria-label="Unread notifications">0</span>
+            </button>
+            <section class="notification-popover hidden" id="notification-popover" aria-label="Notification center">
+              <header class="notification-popover-header">
+                <div><h2>Notifications</h2><p id="notification-summary">Your latest updates</p></div>
+                <button class="btn btn-soft btn-sm" id="mark-all-notifications-read" type="button" disabled>Mark all read</button>
+              </header>
+              <div class="notification-filter-row">
+                <label for="notification-filter">Show</label>
+                <select class="form-select" id="notification-filter">
+                  <option value="all">All</option><option value="unread">Unread</option><option value="read">Read</option>
+                </select>
+              </div>
+              <div class="notification-list" id="notification-list" aria-live="polite"></div>
+              <p class="notification-feedback" id="notification-feedback" role="status" aria-live="polite"></p>
+              <button class="btn btn-outline btn-sm notification-load-more hidden" id="notification-load-more" type="button">Load more</button>
+            </section>
+          </div>
+          <div class="profile-trigger">
+            <span class="avatar" id="top-avatar">AK</span>
+            <div class="profile-trigger-copy">
+              <b id="top-name">Asha Kumar</b>
+              <small id="top-role">Candidate</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content" id="main-content">
+        <!-- Views are rendered dynamically by app.js -->
+      </main>
+
+      <footer class="app-footer">
+        <span>© 2026 SkillBridge · Your skills. Your opportunities. Your next step.</span>
+        <span>Built for clearer career moves</span>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Root container for modals & dialogs -->
+  <div id="bridgemate-root"></div>
+  <div id="modal-root"></div>
+
+  <!-- Application Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

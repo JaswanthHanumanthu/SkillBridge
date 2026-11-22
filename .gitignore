@@ -1,0 +1,75 @@
+# Environment variables & secrets (CRITICAL: Never commit credentials)
+.env
+.env.*
+!.env.example
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+.venv*/
+venv_*/
+venv-broken/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Test, type-checker, and coverage artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# Frontend dependencies (if installed locally)
+node_modules/
+
+# Uploaded files may contain private CVs or other personal data.
+uploads/**
+!uploads/**/.gitkeep
+
+# Database backups and local database files; keep schema, migrations, and seeds.
+database/backups/
+*.dump
+*.backup
+*.bak
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs, temporary files, and local-only state
+logs/
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
